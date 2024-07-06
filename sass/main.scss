@@ -18,4 +18,96 @@ $darkBlue:  hsl(223, 47%, 23%);
 body{
     font-size: 16px;
     font-family: "Red Hat Display", sans-serif;
+    background-color: $desaturatedBlue;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 1em;
+        max-width: 400px;
+        overflow: hidden;
+        border-radius: 15px;
+        background-color: $veryPaleBlue;
+        .card-img{
+            img{
+                width: 100%;
+            }
+        }
+        .card-body{
+            margin: 1em;
+            .card-title{
+                text-align: center;
+                margin-bottom: .5em;
+            }
+            .card-description{
+                text-align: center;
+                letter-spacing: 1px;
+            }
+            .card-plan-info{
+                margin: 1em 0;
+                padding: 1em;
+                display: flex;
+                flex-direction: row;
+                background-color: $paleBlue;
+                border-radius: 15px;
+                align-items: center;
+                position: relative;
+                img{
+                    align-self: flex-start;
+                    box-shadow: 0 0 2px black;
+                    border-radius: 50%;
+                }
+                .card-plan-header{
+                    margin-left: 1em;
+                    
+                }
+                a{
+                    position: absolute;
+                    right: 20px;
+                    text-decoration: none;
+                    color:$brightBlue;
+                    transition:color .5s;
+                    cursor: pointer;
+                }
+                a:hover{
+                    color:$desaturatedBlue;
+                }
+            }
+            .proceed-btn{
+                width: 100%;
+                padding: 1em 1.5em;
+                background-color: $brightBlue;
+                border-radius: 15px;
+                border: none;
+                color: $veryPaleBlue;
+                font-weight: 600;
+                transition: background-color .5s;
+                cursor: pointer;
+            }
+            .proceed-btn:hover{
+                background-color: $desaturatedBlue;
+            }
+            
+            .cancel-link{
+                text-align: center;
+                width: 100%;
+                margin-top: 1em;
+                border: none;
+                background: transparent;
+                transition: font-weight .5s;
+                cursor: pointer;
+            }
+            .cancel-link:hover{
+                font-weight: bold;
+            }
+        }
+    }
 }
